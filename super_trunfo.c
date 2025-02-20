@@ -47,43 +47,119 @@ void printCard(struct Card card) {
     printf("\n");
 }
 
-int compareAttributesInteger(int first, int second) {
-    if (first > second) {
-        return 1;
-    }
-    return 2;
-}
 
-int compareAttributesFloat(float first, float second) {
-    if (first > second)
-        return 1;
-    return 2;
+int compareAttribute() {
+    int response = 1;
+    printf("Informe sua o attributo a ser testado: "
+           "(0) Populacao \n"
+           "(1) de Area \n"
+           "(2) de PIB \n"
+           "(3) de TuristicPoints \n"
+           "(4) de DensityPopulational \n"
+           "(5) de PIBPerPerson \n"
+           "(6) de SuperPower \n" );
+    scanf("%d", &response);
+    if (response > 6 || response < 0) {
+        return 0;
+    }
+    return response;
 }
 
 
 void compareCards(struct Card* card1, struct Card* card2) {
-    printf("Comparação de Cartas: \n");
-    printf("População: Carta %d venceu (%d)\n",
-        compareAttributesInteger(card1->Population, card2->Population),
-        (compareAttributesInteger(card1->Area, card2->Area) == 1));
-    printf("Área: Carta %d venceu (%d)\n",
-        compareAttributesFloat(card1->Area, card2->Area),
-        compareAttributesFloat(card1->Area, card2->Area) == 1);
-    printf("PIB: Carta %d venceu (%d)\n",
-        compareAttributesFloat(card1->PIB, card2->PIB),
-        compareAttributesFloat(card1->PIB, card2->PIB) == 1);
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n",
-        compareAttributesInteger(card1->TuristicPoints, card2->TuristicPoints),
-        compareAttributesInteger(card1->TuristicPoints, card2->TuristicPoints) == 1);
-    printf("Densidade Populacional: Carta %d venceu (%d)\n",
-        compareAttributesFloat(card1->DensityPopulational, card2->DensityPopulational),
-        compareAttributesFloat(card1->DensityPopulational, card2->DensityPopulational) == 1);
-    printf("PIB per Capita: Carta %d venceu (%d)\n",
-        compareAttributesFloat(card1->PIBPerPerson, card2->PIBPerPerson),
-        compareAttributesFloat(card1->PIBPerPerson, card2->PIBPerPerson) == 1);
-    printf("Super Poder: Carta %d venceu (%d)\n",
-        compareAttributesFloat(card1->SuperPower, card2->SuperPower),
-        compareAttributesFloat(card1->SuperPower, card2->SuperPower) == 1);
+    int attribute = compareAttribute();
+    switch (attribute) {
+        case 0:
+            printf("Carta 1 - %s : %d \n", card1->Name, card1->Population);
+            printf("Carta 2 - %s : %d \n", card2->Name, card2->Population);
+            if (card1->Population > card2->Population) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->Population > card1->Population) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+
+            break;
+        case 1:
+            printf("Carta 1 - %s : %f \n", card1->Name, card1->Area);
+            printf("Carta 2 - %s : %f \n", card2->Name, card2->Area);
+            if (card1->Area > card2->Area) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->Area > card1->Area) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+            break;
+        case 2:
+            printf("Carta 1 - %s : %f \n", card1->Name, card1->PIB);
+            printf("Carta 2 - %s : %f \n", card2->Name, card2->PIB);
+            if (card1->PIB > card2->PIB) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->PIB > card1->PIB) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+            break;
+        case 3:
+            printf("Carta 1 - %s : %d \n", card1->Name, card1->TuristicPoints);
+            printf("Carta 2 - %s : %d \n", card2->Name, card2->TuristicPoints);
+            if (card1->TuristicPoints > card2->TuristicPoints) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->TuristicPoints > card1->TuristicPoints) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+            break;
+        case 4:
+            printf("Carta 1 - %s : %f \n", card1->Name, card1->DensityPopulational);
+            printf("Carta 2 - %s : %f \n", card2->Name, card2->DensityPopulational);
+            if (card1->DensityPopulational < card2->DensityPopulational) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->DensityPopulational < card1->DensityPopulational) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+            break;
+        case 5:
+            printf("Carta 1 - %s : %f \n", card1->Name, card1->PIBPerPerson);
+            printf("Carta 2 - %s : %f \n", card2->Name, card2->PIBPerPerson);
+            if (card1->PIBPerPerson > card2->PIBPerPerson) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->PIBPerPerson > card1->PIBPerPerson) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+            break;
+        case 6:
+            printf("Carta 1 - %s : %f \n", card1->Name, card1->SuperPower);
+            printf("Carta 2 - %s : %f \n", card2->Name, card2->SuperPower);
+            if (card1->SuperPower > card2->SuperPower) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->SuperPower > card1->SuperPower) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+            break;
+        default:
+            printf("Carta 1 - %s : %d \n", card1->Name, card1->Population);
+            printf("Carta 2 - %s : %d \n", card2->Name, card2->Population);
+            if (card1->Population > card2->Population) {
+                printf("Resultado: Carta 1 (%s) venceu !!", card1->Name);
+            } else if (card2->Population > card1->Population) {
+                printf("Resultado: Carta 2 (%s) venceu !!", card2->Name);
+            } else {
+                printf("Resultado: Empate!!");
+            }
+
+            break;
+    }
 }
 
 int main() {
@@ -101,5 +177,4 @@ int main() {
     printCard(card2);
     printf("************************************* \n");
     compareCards(&card1, &card2);
-    printf("************************************* \n");
 }
