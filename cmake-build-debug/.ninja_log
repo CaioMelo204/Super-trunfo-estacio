@@ -1,0 +1,20 @@
+# ninja log v6
+74	164	7617844082622767	CMakeFiles/super_trunfo.dir/main.c.obj	a9475107fc68b02a
+164	409	7617844083525675	super_trunfo.exe	b30321f3608f3b68
+24	575	7617845036474429	build.ninja	6f02be254195a7a2
+26	99	7617845037933091	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+100	197	7617845038670503	super_trunfo.exe	c4b23d5d2234f3a6
+24	99	7617850307804024	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+100	196	7617850308556973	super_trunfo.exe	c4b23d5d2234f3a6
+21	86	7617851029067213	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+87	171	7617851029720615	super_trunfo.exe	c4b23d5d2234f3a6
+23	101	7617856273513249	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+102	189	7617856274298227	super_trunfo.exe	c4b23d5d2234f3a6
+3	74	7617857954387300	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+74	165	7617857955100496	super_trunfo.exe	c4b23d5d2234f3a6
+20	87	7617859847735354	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+88	172	7617859848410441	super_trunfo.exe	c4b23d5d2234f3a6
+20	84	7617860662527139	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+85	170	7617860663166638	super_trunfo.exe	c4b23d5d2234f3a6
+20	101	7617872046297445	CMakeFiles/super_trunfo.dir/super_trunfo.c.obj	fd1d1f2e3cd34005
+101	188	7617872047110522	super_trunfo.exe	c4b23d5d2234f3a6
